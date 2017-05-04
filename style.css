@@ -1,0 +1,10 @@
+body {
+  font-family: 'Arial', sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+#svg-icon {
+  width: 50%;
+  height: auto;
+}
