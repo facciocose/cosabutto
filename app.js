@@ -51,7 +51,7 @@ $(function() {
 
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
-      $.getJSON("http://nominatim.openstreetmap.org/reverse?zoom=8&format=json&json_callback=?", {
+      $.getJSON("https://nominatim.openstreetmap.org/reverse?zoom=8&format=json&json_callback=?", {
         lat: position.coords.latitude,
         lon: position.coords.longitude
       }, function(response) {
