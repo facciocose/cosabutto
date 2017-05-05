@@ -20,6 +20,7 @@ $(function() {
 
         $title.text(rifiutoDiOggi.LABEL);
         $subtitle.text(DB[comune].LABEL);
+        document.title = document.title + " a " + DB[comune].LABEL;
 
         $title.css({ color: rifiutoDiOggi.TEXT_COLOR});
         $subtitle.css({ color: rifiutoDiOggi.TEXT_COLOR});
