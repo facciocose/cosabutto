@@ -5,13 +5,15 @@ $(function() {
   var $subtitle = $("#subtitle");
   var $icon = $("#icon");
 
-  if ("geolocation" in navigator) {
+  /* if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(function(position) {
       $.getJSON("https://nominatim.openstreetmap.org/reverse?zoom=8&format=json&json_callback=?", {
         lat: position.coords.latitude,
         lon: position.coords.longitude
       }, function(response) {
+
         comune = response.address.county;
+        */
         var d = new Date();
         var dayOfTheWeek = d.getDay();
         var dayIndex = Object.keys(DB[comune].GIORNO)[dayOfTheWeek];
@@ -26,7 +28,7 @@ $(function() {
         $subtitle.css({ color: rifiutoDiOggi.TEXT_COLOR});
         $("body").css({background: rifiutoDiOggi.COLOR});
         $icon.css({fill: rifiutoDiOggi.TEXT_COLOR});
-      });
-    });
-  }
+     // });
+   // });
+  //}
 });
