@@ -3,6 +3,7 @@ var DB = {};
 // Catania
 DB.CT = {
   LABEL: "Catania",
+  DESCRIPTION: "Dalle 20 alle 22:30",
   RIFIUTO: {
     INDIFFERENZIATO: {
       COLOR: "#455660",

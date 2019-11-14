@@ -3,6 +3,7 @@ var comune = "CT";
 $(function() {
   var $title = $("#title");
   var $subtitle = $("#subtitle");
+  var $description = $("#description");
   var $icon = $("#icon");
 
   var d = new Date();
@@ -13,10 +14,12 @@ $(function() {
 
   $title.text(rifiutoDiOggi.LABEL);
   $subtitle.text(DB[comune].LABEL);
+  $description.text(DB[comune].DESCRIPTION);
   document.title = document.title + " a " + DB[comune].LABEL;
 
   $title.css({ color: rifiutoDiOggi.TEXT_COLOR});
   $subtitle.css({ color: rifiutoDiOggi.TEXT_COLOR});
+  $description.css({ color: rifiutoDiOggi.TEXT_COLOR});
   $("body").css({background: rifiutoDiOggi.COLOR});
   $icon.css({fill: rifiutoDiOggi.TEXT_COLOR});
 });
