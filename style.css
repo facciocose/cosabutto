@@ -1,10 +1,42 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: 'Arial', sans-serif;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
 }
 
 #svg-icon {
   width: 50%;
   height: auto;
+}
+
+#container {
+  height: 100%;
+  min-height: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#main {
+  flex: 4;
+  box-sizing: border-box;
+}
+
+#footer {
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+}
+
+#footer > div {
+  flex: 1;
 }

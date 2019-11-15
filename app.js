@@ -5,6 +5,7 @@ $(function() {
   var $subtitle = $("#subtitle");
   var $description = $("#description");
   var $icon = $("#icon");
+  var $footer = $("#footer");
 
   var d = new Date();
   var dayOfTheWeek = d.getDay();
@@ -22,4 +23,10 @@ $(function() {
   $description.css({ color: rifiutoDiOggi.TEXT_COLOR});
   $("body").css({background: rifiutoDiOggi.COLOR});
   $icon.css({fill: rifiutoDiOggi.TEXT_COLOR});
+
+  $.each(DB[comune].GIORNO, function(k, v) {
+    var element = $("<div><h3>" + k + "</h3><p>" + v.LABEL + "</p></div>");
+    element.css({background: v.COLOR});
+    $footer.append(element);
+  });
 });
