@@ -6,7 +6,7 @@ html, body {
 
 body {
   font-family: 'Arial', sans-serif;
-  font-size: 3em;
+  font-size: 4em;
   text-align: center;
 }
 
@@ -16,6 +16,14 @@ body {
 }
 
 #container {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* #container {
   height: 100%;
   min-height: 100%;
   box-sizing: border-box;
@@ -23,15 +31,14 @@ body {
   flex-direction: column;
   vertical-align: middle;
   text-align: center;
-}
+} */
 
 #main {
+  padding: 1em;
   flex: 4;
-  box-sizing: border-box;
 }
 
 #footer {
-  box-sizing: border-box;
   flex: 1;
   display: flex;
   flex-direction: row;

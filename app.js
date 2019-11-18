@@ -24,9 +24,25 @@ $(function() {
   $("body").css({background: rifiutoDiOggi.COLOR});
   $icon.css({fill: rifiutoDiOggi.TEXT_COLOR});
 
+  var i;
+
   $.each(DB[comune].GIORNO, function(k, v) {
-    var element = $("<div><h3>" + k + "</h3><p>" + v.LABEL + "</p></div>");
-    element.css({background: v.COLOR});
-    $footer.append(element);
+    if (dayIndex == k) {
+      i = 0;
+    }
+
+    if (i < 3) {
+      i++;
+    }
+
+    if (i > 1) {
+      var element = $("<div><h3>" + k + "</h3><p>" + v.LABEL + "</p></div>");
+      element.css({background: v.COLOR});
+      $footer.append(element);
+    }
+
+    if (i == 3) {
+      return false;
+    }
   });
 });
