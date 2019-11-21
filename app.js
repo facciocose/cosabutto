@@ -23,26 +23,18 @@ $(function() {
   $description.css({ color: rifiutoDiOggi.TEXT_COLOR});
   $("body").css({background: rifiutoDiOggi.COLOR});
   $icon.css({fill: rifiutoDiOggi.TEXT_COLOR});
+  $(".flickity-button-icon").css({fill: rifiutoDiOggi.TEXT_COLOR});
 
   var i;
 
   $.each(DB[comune].GIORNO, function(k, v) {
-    if (dayIndex == k) {
-      i = 0;
-    }
+    var element = $('<div class="carousel-cell"><h3>' + k + '</h3><p>' + v.LABEL + '</p></div>');
+    element.css({background: v.COLOR, color: v.TEXT_COLOR});
+    $footer.append(element);
+  });
 
-    if (i < 3) {
-      i++;
-    }
-
-    if (i > 1) {
-      var element = $("<div><h3>" + k + "</h3><p>" + v.LABEL + "</p></div>");
-      element.css({background: v.COLOR});
-      $footer.append(element);
-    }
-
-    if (i == 3) {
-      return false;
-    }
+  $footer.flickity({
+    pageDots: false
   });
 });
+
