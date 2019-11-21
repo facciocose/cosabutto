@@ -34,7 +34,9 @@ $(function() {
   });
 
   $footer.flickity({
-    pageDots: false
+    pageDots: false,
+    initialIndex: dayOfTheWeek,
+    wrapAround: true
   });
 });
 
