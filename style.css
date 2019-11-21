@@ -35,7 +35,7 @@ body {
 
 #main {
   padding: 1em;
-  flex: 4;
+  flex: 3;
 }
 
 #footer {
@@ -69,4 +69,18 @@ body {
 
 .flickity-button:disabled {
   display: none;
+}
+
+.carousel-cell {
+  height: 100%;
+}
+
+@media screen and (orientation:landscape) {
+  #main {
+    display: none;
+  }
+
+  #footer {
+    height: 100%;
+  }
 }

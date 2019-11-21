@@ -36,7 +36,8 @@ $(function() {
   $footer.flickity({
     pageDots: false,
     initialIndex: dayOfTheWeek,
-    wrapAround: true
+    wrapAround: true,
+    setGallerySize: false
   });
 });
 
